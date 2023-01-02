@@ -67,6 +67,7 @@ KERNEL_VENDOR_CMDLINE+=" printk.devkmsg=on cma_sysfs.experimental=Y stack_depot_
 KERNEL_VENDOR_CMDLINE+=" at24.write_timeout=100 buildvariant=user"
 KERNEL_VENDOR_CMDLINE+=" log_buf_len=1024K"
 KERNEL_VENDOR_CMDLINE+=" nosoftlockup mce=ignore_ce"
+KERNEL_VENDOR_CMDLINE+=" noirqdebug"
 VENDOR_BOOTCONFIG="androidboot.boot_devices=14700000.ufs"
 
 AVB_SIGN_BOOT_IMG=1
