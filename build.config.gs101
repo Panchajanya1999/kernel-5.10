@@ -62,6 +62,7 @@ KERNEL_VENDOR_CMDLINE="earlycon=exynos4210,0x10A00000 console=ttySAC0,115200 and
 KERNEL_VENDOR_CMDLINE+=" printk.devkmsg=on cma_sysfs.experimental=Y stack_depot_disable=off page_pinner=on cgroup_disable=pressure"
 KERNEL_VENDOR_CMDLINE+=" at24.write_timeout=100 buildvariant=user"
 KERNEL_VENDOR_CMDLINE+=" log_buf_len=1024K"
+KERNEL_VENDOR_CMDLINE+=" nosoftlockup mce=ignore_ce"
 VENDOR_BOOTCONFIG="androidboot.boot_devices=14700000.ufs"
 
 AVB_SIGN_BOOT_IMG=1
