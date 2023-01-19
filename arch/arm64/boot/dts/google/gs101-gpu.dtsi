@@ -38,7 +38,7 @@
 		physical-memory-group-manager = <&mali_mgm>;
 
 		/* Priority control */
-		priority-control-manager = <&mali_pcm>;
+		/*priority-control-manager = <&mali_pcm>;*/
 
 		/* Clocks */
 		gpu0_cmu_cal_id = <ACPM_DVFS_G3DL2>;
