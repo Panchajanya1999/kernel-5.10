@@ -242,6 +242,7 @@ static int gfspi_ioctl_clk_uninit(struct gf_dev *data)
 }
 #endif
 
+#if defined(SUPPORT_NAV_EVENT)
 static void nav_event_input(struct gf_dev *gf_dev, gf_nav_event_t nav_event)
 {
 	uint32_t nav_input = 0;
@@ -308,6 +309,7 @@ static void nav_event_input(struct gf_dev *gf_dev, gf_nav_event_t nav_event)
 		input_sync(gf_dev->input);
 	}
 }
+#endif
 
 static irqreturn_t gf_irq(int irq, void *handle)
 {
