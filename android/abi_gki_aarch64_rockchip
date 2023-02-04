@@ -1417,6 +1417,7 @@
   mmc_wait_for_req
   netif_rx
   netif_rx_ni
+  netif_set_xps_queue
   __netlink_kernel_create
   netlink_kernel_release
   netlink_unicast
@@ -1426,6 +1427,11 @@
   nla_put_nohdr
   nla_reserve
   __nlmsg_put
+  pci_enable_device
+  pci_enable_wake
+  pci_get_device
+  pci_load_and_free_saved_state
+  pci_store_saved_state
   prandom_bytes
   prandom_u32
   _raw_read_lock_bh
@@ -2130,6 +2136,13 @@
   backlight_device_unregister
   pwm_free
   pwm_request
+
+# required by pwrseq_simple.ko
+  bitmap_alloc
+  devm_gpiod_get_array
+  gpiod_set_array_value_cansleep
+  mmc_pwrseq_register
+  mmc_pwrseq_unregister
 
 # required by reboot-mode.ko
   devres_release
