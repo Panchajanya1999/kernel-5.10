@@ -2,6 +2,10 @@
 #
 # Makefile for CoreSight drivers.
 #
+
+# Always use -O2 optimisations for CoreSight
+KBUILD_CFLAGS += -O2
+
 obj-$(CONFIG_CORESIGHT) += coresight.o
 coresight-y := coresight-core.o  coresight-etm-perf.o coresight-platform.o \
 		coresight-sysfs.o
