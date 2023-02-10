@@ -269,6 +269,7 @@ static int pt_resize_thread(void *data)
 			driver->properties->nodes[pts->property_index]->name,
 			false, (int)size, pts->ptid);
 	}
+	return 0;
 }
 
 /*
