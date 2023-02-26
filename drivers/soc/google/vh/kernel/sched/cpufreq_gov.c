@@ -1206,6 +1206,9 @@ static ssize_t limit_frequency_store(struct gov_attr_set *attr_set, const char *
 	struct sugov_tunables *tunables = to_sugov_tunables(attr_set);
 	unsigned int val;
 
+	// make the node no-op
+	return count;
+
 	if (kstrtouint(buf, 0, &val))
 		return -EINVAL;
 
@@ -1213,7 +1216,7 @@ static ssize_t limit_frequency_store(struct gov_attr_set *attr_set, const char *
 
 	return count;
 }
-static struct governor_attr limit_frequency = __ATTR_RW(limit_frequency);
+static struct governor_attr limit_frequency = __ATTR_RO(limit_frequency);
 
 static ssize_t pmu_limit_enable_show(struct gov_attr_set *attr_set, char *buf)
 {
