@@ -109,19 +109,16 @@
 #define log_dev_err(dev, fmt, ...)	\
 do {									\
 	dev_printk_emit(LOGLEVEL_ERR, dev, fmt, ##__VA_ARGS__);		\
-	dbg_snapshot_itmon_backup_log(fmt, ##__VA_ARGS__);		\
 } while (0)
 
 #define log_dev_info(dev, fmt, ...)	\
 do {									\
 	dev_printk_emit(LOGLEVEL_INFO, dev, fmt, ##__VA_ARGS__);	\
-	dbg_snapshot_itmon_backup_log(fmt, ##__VA_ARGS__);		\
 } while (0)
 
 #define log_dev_dbg(dev, fmt, ...)	\
 do {									\
 	dev_printk_emit(LOGLEVEL_DEBUG, dev, fmt, ##__VA_ARGS__);	\
-	dbg_snapshot_itmon_backup_log(fmt, ##__VA_ARGS__);		\
 } while (0)
 
 enum err_type {
